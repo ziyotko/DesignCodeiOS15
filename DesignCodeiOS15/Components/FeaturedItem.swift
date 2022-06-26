@@ -1,13 +1,13 @@
 //
-//  ContentView.swift
+//  FeatureItem.swift
 //  DesignCodeiOS15
 //
-//  Created by 支天白 on 2022/6/21.
+//  Created by 支天白 on 2022/6/26.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct FeaturedItem: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8.0) {
             Spacer()
@@ -50,20 +50,12 @@ struct ContentView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(height:230)
                 .offset(x:32,y: -80)
-        )
-            
+    )
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct FeatureItem_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            ContentView()
-            ContentView()
-                .preferredColorScheme(.dark)
-        }
-            
-            
+        FeaturedItem()
     }
 }
-
