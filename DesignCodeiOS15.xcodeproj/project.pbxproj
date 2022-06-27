@@ -11,6 +11,8 @@
 		9A300FE828616FD9002AA3A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A300FE728616FD9002AA3A1 /* ContentView.swift */; };
 		9A300FEA28616FDB002AA3A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A300FE928616FDB002AA3A1 /* Assets.xcassets */; };
 		9A300FED28616FDB002AA3A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A300FEC28616FDB002AA3A1 /* Preview Assets.xcassets */; };
+		9A3D930E28697F160088D88B /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3D930D28697F160088D88B /* NetWorkManager.swift */; };
+		9A3D9310286989710088D88B /* NewsListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3D930F286989710088D88B /* NewsListModel.swift */; };
 		9A55897E28630075007FA03F /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55897D28630075007FA03F /* Styles.swift */; };
 		9A55898028630B06007FA03F /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A55897F28630B06007FA03F /* AccountView.swift */; };
 		9A6C3F4028674D58000A45F9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9A6C3F3F28674D58000A45F9 /* Alamofire */; };
@@ -28,6 +30,9 @@
 		9A300FE728616FD9002AA3A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9A300FE928616FDB002AA3A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A300FEC28616FDB002AA3A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9A3D930D28697F160088D88B /* NetWorkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
+		9A3D930F286989710088D88B /* NewsListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListModel.swift; sourceTree = "<group>"; };
+		9A3D931128698E110088D88B /* NewsList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NewsList.json; sourceTree = "<group>"; };
 		9A55897D28630075007FA03F /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		9A55897F28630B06007FA03F /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		9A6C3F4128676ED1000A45F9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -77,6 +82,7 @@
 				9A6C3F472867735B000A45F9 /* Styles */,
 				9A300FE928616FDB002AA3A1 /* Assets.xcassets */,
 				9A300FEB28616FDB002AA3A1 /* Preview Content */,
+				9A3D930D28697F160088D88B /* NetWorkManager.swift */,
 			);
 			path = DesignCodeiOS15;
 			sourceTree = "<group>";
@@ -102,6 +108,7 @@
 		9A6C3F44286772B2000A45F9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9A3D931128698E110088D88B /* NewsList.json */,
 				9A6C3F4128676ED1000A45F9 /* HomeView.swift */,
 				9A55897F28630B06007FA03F /* AccountView.swift */,
 			);
@@ -121,6 +128,7 @@
 			children = (
 				9AD00F94286588BC008B0027 /* Tab.swift */,
 				9A6C3F4C28677D18000A45F9 /* PerferenceKeys.swift */,
+				9A3D930F286989710088D88B /* NewsListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -209,10 +217,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A3D9310286989710088D88B /* NewsListModel.swift in Sources */,
 				9A55898028630B06007FA03F /* AccountView.swift in Sources */,
 				9A6C3F4228676ED1000A45F9 /* HomeView.swift in Sources */,
 				9A55897E28630075007FA03F /* Styles.swift in Sources */,
 				9A300FE828616FD9002AA3A1 /* ContentView.swift in Sources */,
+				9A3D930E28697F160088D88B /* NetWorkManager.swift in Sources */,
 				9A6C3F4D28677D19000A45F9 /* PerferenceKeys.swift in Sources */,
 				9AD00F95286588BC008B0027 /* Tab.swift in Sources */,
 				9A6C3F4B286776C6000A45F9 /* NavigationBar.swift in Sources */,

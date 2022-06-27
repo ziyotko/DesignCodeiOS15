@@ -6,17 +6,47 @@
 //
 
 import SwiftUI
-
+import Alamofire
 struct HomeView: View {
     @State var hasScrolled = false
+    
+    
+    init() {
+        
+        loadMoarData()
+    }
+    
+    func loadMoarData(){
+            let urlString = "https://www.megawise.cn/mw/api/industry/information/informationList"
+//            let parameters:[String : Any] = [:]
+            
+            SwiftNetWorkManager.sharedInstance.getRequest(urlString, params: nil, success: { (dictResponse) in
+                let loaclData = dictResponse as Data
+                do {
+                     let  dataModel1 = try JSONDecoder().decode(Welcome.self, from: loaclData)
+                    
+                    print(dataModel1.data[0].information.inforTitle)
+                } catch {
+                    print("error")
+                    debugPrint(error)
+                }
+            }) { (error) in
+                if error._code == NSURLErrorTimedOut {
+                } else {
+                }
+            }
+        }
+
+    
+   
     var body: some View {
         ScrollView {
             GeometryReader{ proxy in
-//                Text("\(proxy.frame(in: .named("scroll")).minY)")
+                //                Text("\(proxy.frame(in: .named("scroll")).minY)")
                 Color.clear.preference(key: ScrollPreferenceKey.self, value: proxy.frame(in: .named("scroll")).minY)
             }
             .frame(height: 0)
-           FeaturedItem()
+            FeaturedItem()
         }
         .coordinateSpace(name: "scroll")
         .onPreferenceChange(ScrollPreferenceKey.self, perform: { value in
@@ -38,6 +68,7 @@ struct HomeView: View {
             
         )
     }
+    
 }
 
 struct HomeView_Previews: PreviewProvider {
